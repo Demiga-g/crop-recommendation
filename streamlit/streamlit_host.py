@@ -59,7 +59,7 @@ import numpy as np
 # )
 
 # Load the model
-with open("NBClassifier.pkl", "rb") as f_in:
+with open("../model/NBClassifier.pkl", "rb") as f_in:
     model = pickle.load(f_in)
 
 # Main container
