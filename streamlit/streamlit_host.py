@@ -3,6 +3,7 @@
 import streamlit as st
 import pickle
 import numpy as np
+import os
 
 # Set up the page configuration
 # st.set_page_config(page_title="Crop Recommendation", layout="centered")
@@ -59,7 +60,8 @@ import numpy as np
 # )
 
 # Load the model
-with open("../model/NBClassifier.pkl", "rb") as f_in:
+model_path = os.path.join(os.path.dirname(__file__), "..", "model", "NBClassifier.pkl")
+with open(model_path, "rb") as f_in:
     model = pickle.load(f_in)
 
 # Main container
