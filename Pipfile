@@ -7,10 +7,18 @@ name = "pypi"
 scikit-learn = "==1.2.2"
 flask = "==3.0.3"
 pandas = "==2.2.2"
+gunicorn = "==22.0.0"
 numpy = "==1.26.4"
+streamlit = "*"
 
 [dev-packages]
+pytest = "*"
+deepdiff = "*"
+pylint = "==3.2.6"
+black = "*"
+isort = "*"
+pre-commit = "*"
 
 [requires]
 python_version = "3.10"
-python_full_version = "3.10.4"
+python_full_version = "3.10.13"
