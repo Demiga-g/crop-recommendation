@@ -27,24 +27,25 @@ with st.form(key='crop_form'):
         humidity = st.number_input("Humidity (in %):", min_value=5, max_value=100)
         ph = st.number_input("pH level of soil:", min_value=1, max_value=14)
         rainfall = st.number_input("Rainfall (in mm):", min_value=0, max_value=300)
-        
-    submit_button = st.form_submit_button(label="Predict") 
+
+    submit_button = st.form_submit_button(label="Predict")
 
 
 # Handle form submission
 if submit_button:
-    # Ensure all inputs are filled
-    if N and P and K and temperature and humidity and ph and rainfall:
-        # Convert inputs to float and prepare for prediction
-        form_values = [float(N), float(P), float(K), float(temperature), float(humidity), float(ph), float(rainfall)]
-        data = np.array([form_values])
-        
-        # Get prediction from the model
-        prediction = model.predict(data)
-        output = prediction[0]
-        
-        # Display prediction result
-        st.markdown(f"<h2>Recommended crop is {output}</h2>", unsafe_allow_html=True)
+    required_inputs = [N, P, K, temperature, humidity, ph, rainfall]
+
+    if all(required_inputs):
+        try:
+            form_values = [float(value) for value in required_inputs]
+            data = np.array([form_values])
+
+            prediction = model.predict(data)
+            output = prediction[0]
+
+            st.markdown(f"<h2>Recommended crop is {output}</h2>", unsafe_allow_html=True)
+        except ValueError:
+            st.markdown("<h2>Please ensure all inputs are valid numbers.</h2>", unsafe_allow_html=True)
     else:
         st.markdown("<h2>Please fill in all fields.</h2>", unsafe_allow_html=True)
 
