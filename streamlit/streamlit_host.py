@@ -28,7 +28,7 @@ with st.form(key='crop_form'):
         ph = st.number_input("pH level of soil:", min_value=1, max_value=14)
         rainfall = st.number_input("Rainfall (in mm):", min_value=0, max_value=300)
         
-    submit_button = st.form_submit_button(label="Predict")
+    submit_button = st.form_submit_button(label="Predict") 
 
 
 # Handle form submission
