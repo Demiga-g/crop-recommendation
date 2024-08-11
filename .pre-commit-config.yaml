@@ -1,6 +1,23 @@
 # See https://pre-commit.com for more information
 # See https://pre-commit.com/hooks.html for more hooks
 repos:
+# -   repo: local
+#     hooks:
+#     -   id: check-staged-only
+#         name: Check only staged files
+#         entry: |
+#             bash -c '
+#             staged_files=$(git diff --name-only --cached)
+#             if [ -n "$staged_files" ]; then
+#                 echo "$staged_files" | xargs pre-commit run --files
+#             else
+#                 echo "No staged files."
+#             fi'
+#         language: system
+#         pass_filenames: false
+#         always_run: true
+
+
 -   repo: https://github.com/pre-commit/pre-commit-hooks
     rev: v3.2.0
     hooks:
