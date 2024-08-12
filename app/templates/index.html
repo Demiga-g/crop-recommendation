@@ -7,37 +7,37 @@
     <title>Crop Recommendation</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Crop Recommendation</h1>
-        <form action="{{ url_for('predict_endpoint') }}" method="POST">
-            <div class="form-group">
-                <label for="n">N (Nitrogen content in soil):</label>
-                <input type="text" id="n" name="N" required>
+<div class="container">
+    <h1>Crop Recommendation</h1>
+    <form action="{{ url_for('predict_endpoint') }}" method="POST" id="cropForm">
+        <div class="form-group">
+            <label for="n">N (Nitrogen content in soil):</label>
+            <input type="number" id="n" name="N" min="0" max="150" step="1" required>
 
-                <label for="p">P (Phosphorus content in soil):</label>
-                <input type="text" id="p" name="P" required>
+            <label for="p">P (Phosphorus content in soil):</label>
+            <input type="number" id="p" name="P" min="0" max="155" step="1" required>
 
-                <label for="k">K (Potassium content in soil):</label>
-                <input type="text" id="k" name="K" required>
+            <label for="k">K (Potassium content in soil):</label>
+            <input type="number" id="k" name="K" min="0" max="210" step="1" required>
 
-                <label for="temperature">Temperature (in Celsius):</label>
-                <input type="text" id="temperature" name="temperature" required>
+            <label for="temperature">Temperature (in Celsius):</label>
+            <input type="number" id="temperature" name="temperature" min="5.50" max="50.00" step="0.01" required>
 
-                <label for="humidity">Humidity (in %):</label>
-                <input type="text" id="humidity" name="humidity" required>
+            <label for="humidity">Humidity (in %):</label>
+            <input type="number" id="humidity" name="humidity" min="10.0" max="100.0" step="0.1" required>
 
-                <label for="ph">pH level of soil:</label>
-                <input type="text" id="ph" name="ph" required>
+            <label for="ph">pH level of soil:</label>
+            <input type="number" id="ph" name="ph" min="3.0" max="10.5" step="0.1" required>
 
-                <label for="rainfall">Rainfall (in mm):</label>
-                <input type="text" id="rainfall" name="rainfall" required>
-            </div>
-            <input type="submit" value="Predict">
-        </form>
-
+            <label for="rainfall">Rainfall (in mm):</label>
+            <input type="number" id="rainfall" name="rainfall" min="19.5" max="300.0" step="0.1" required>
+        </div>
+        <input type="submit" value="Predict">
+    </form>
         {% if prediction_text %}
             <h2>{{ prediction_text }}</h2>
         {% endif %}
     </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
 </body>
 </html>
