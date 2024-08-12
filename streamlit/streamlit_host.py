@@ -1,4 +1,3 @@
-# pylint: disable=missing-module-docstring
 import os
 import pickle
 
@@ -6,7 +5,7 @@ import numpy as np
 
 import streamlit as st
 
-# # Set up the page configuration
+# Set up the page configuration
 st.set_page_config(page_title='Crop Recommendation', layout='centered')
 
 # Load the model
