@@ -35,6 +35,6 @@ jobs:
       - name: Running formatting and linting tools
         run: |
           cd streamlit
-          black .
-          isort --length-sort .
-          pylint --recursive=y .
+          pipenv run black .
+          pipenv run isort --length-sort .
+          pipenv run pylint --recursive=y .
