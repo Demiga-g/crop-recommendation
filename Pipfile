@@ -7,17 +7,17 @@ name = "pypi"
 scikit-learn = "==1.2.2"
 flask = "==3.0.3"
 pandas = "==2.2.2"
-gunicorn = "==22.0.0"
+uvicorn = "==0.30.5"
+asgiref = "==3.8.1"
 numpy = "==1.26.4"
-streamlit = "*"
+streamlit = "1.37.0"
+mlops = {file = ".", editable = true}
 
 [dev-packages]
-pytest = "*"
-deepdiff = "*"
 pylint = "==3.2.6"
-black = "*"
-isort = "*"
-pre-commit = "*"
+black = "24.8.0"
+isort = "5.13.2"
+pre-commit = "3.8.0"
 
 [requires]
 python_version = "3.10"
