@@ -1,11 +1,11 @@
 # pylint: disable=import-error
 import numpy as np
-
-import streamlit as st
 from mlops.utility_functions import load_model
 
+import streamlit as st
+
 # Get model
-model = load_model("SVM")
+model = load_model("NBClassifier")
 
 # Set up the page configuration
 st.set_page_config(page_title='Crop Recommendation', layout='centered')
