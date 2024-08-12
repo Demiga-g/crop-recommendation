@@ -1,20 +1,13 @@
-import os
-import pickle
-
 import numpy as np
 
 import streamlit as st
+from mlops.utility_functions import load_model
+
+# Get model
+model = load_model("NBClassifier")
 
 # Set up the page configuration
 st.set_page_config(page_title='Crop Recommendation', layout='centered')
-
-# Load the model
-model_path = os.path.join(
-    os.path.dirname(__file__), '..', 'model', 'NBClassifier.pkl'
-)
-with open(model_path, 'rb') as f_in:
-    model = pickle.load(f_in)
-
 
 st.title('Crop Recommendation')
 
