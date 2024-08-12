@@ -32,9 +32,9 @@ jobs:
           python -m pip install --upgrade pip
           pip install pipenv && pipenv install --dev
 
-      - name: Running linting
+      - name: Running formatting and linting tools
         run: |
           cd streamlit
-          pipenv run pylint --recursive=y .
-          pipenv run black .
-          pipenv run isort --ls .
+          black .
+          isort --length-sort .
+          pylint --recursive=y .
