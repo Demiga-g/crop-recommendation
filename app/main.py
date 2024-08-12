@@ -1,4 +1,6 @@
 import numpy as np
+import uvicorn
+from asgiref.wsgi import WsgiToAsgi
 from flask import Flask, render_template, request
 
 from mlops.utility_functions import load_model
@@ -31,5 +33,7 @@ def predict_endpoint():
     )
 
 
+asgi_app = WsgiToAsgi(app)
+
 if __name__ == "__main__":
-    app.run(debug=True, host='0.0.0.0', port=9696)
+    uvicorn.run("main:asgi_app", host='0.0.0.0', port=9696, reload=True)
