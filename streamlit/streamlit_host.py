@@ -17,26 +17,26 @@ col1, col2 = st.columns(2)
 with st.form(key='crop_form'):
     with col1:
         N = st.number_input(
-            'N (Nitrogen content in soil):', min_value=0, max_value=250
+            'N (Nitrogen content in soil):', min_value=0, max_value=150
         )
         P = st.number_input(
-            'P (Phosphorus content in soil):', min_value=0, max_value=250
+            'P (Phosphorus content in soil):', min_value=0, max_value=155
         )
 
         K = st.number_input(
-            'K (Potassium content in soil):', min_value=0, max_value=250
+            'K (Potassium content in soil):', min_value=0, max_value=210
         )
         temperature = st.number_input(
-            'Temperature (in Celsius):', min_value=5, max_value=50
+            'Temperature (in Celsius):', min_value=5.50, max_value=50.00
         )
 
     with col2:
         humidity = st.number_input(
-            'Humidity (in %):', min_value=5, max_value=100
+            'Humidity (in %):', min_value=10.0, max_value=100.0
         )
-        ph = st.number_input('pH level of soil:', min_value=1, max_value=14)
+        ph = st.number_input('pH level of soil:', min_value=3.0, max_value=10.5)
         rainfall = st.number_input(
-            'Rainfall (in mm):', min_value=0, max_value=300
+            'Rainfall (in mm):', min_value=19.5, max_value=300.0
         )
 
     submit_button = st.form_submit_button(label='Predict')
