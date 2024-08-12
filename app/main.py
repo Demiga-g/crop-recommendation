@@ -1,7 +1,7 @@
-import pickle
-
 import numpy as np
-from flask import Flask, request, render_template
+from flask import Flask, render_template, request
+
+from mlops.utility_functions import load_model
 
 app = Flask(__name__)
 
@@ -16,8 +16,7 @@ def predict_endpoint():
     """This function serves as the API endpoint for the recommendation prediction."""
 
     # Load model
-    with open('../model/NBClassifier.pkl', 'rb') as f_in:
-        model = pickle.load(f_in)
+    model = load_model('NBClassifier')
 
     # get data
     form_values = [float(x) for x in request.form.values()]
