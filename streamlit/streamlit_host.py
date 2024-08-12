@@ -2,7 +2,7 @@
 import numpy as np
 
 import streamlit as st
-from src.mlops.utility_functions import load_model
+from mlops.utility_functions import load_model
 
 # Get model
 model = load_model("SVM")
