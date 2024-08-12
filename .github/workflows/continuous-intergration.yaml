@@ -4,9 +4,8 @@ on:
     branches:
       - 'main'
     paths:
-      - 'app/**'
-      - 'model/**'
       - 'streamlit/**'
+      - 'model/**'
 
 jobs:
   test:
@@ -15,17 +14,19 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python 3.10
-      - uses: actions/setup-python@v2
+        uses: actions/setup-python@v2
         with:
           python-version: 3.10
 
       - name: Install dependencies
         run: |
+          cd streamlit
           python -m pip install --upgrade pip
           pip install pipenv && pipenv install --dev
 
       - name: Running formatting tools
         run: |
+          cd streamlit
           pipenv run pylint --recursive=y .
           pipenv run black .
           pipenv run isort .
