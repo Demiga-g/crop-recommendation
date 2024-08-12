@@ -36,9 +36,5 @@ jobs:
         run: |
           cd streamlit
           pipenv run pylint --recursive=y .
-
-      - name: Run formatting
-        run: |
-          cd streamlit
           pipenv run black .
           pipenv run isort .
