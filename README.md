@@ -1,45 +1,55 @@
 # Crop Recommendation
 
+## About the Project
 
-Environment Setup
+This project takes into account the growing trend of precision agriculture; loosely defined as the farming strategy where observation and measurement are used to make informed decision that can improve agricultural production and sustainability.
 
-Docker
-Anaconda
-Ubuntu
+Therefore, this will be a proof of concept project that shows how a predictive model can be created to help farmers identify the "right" crop to focus on based on some parameters such as the content of nitrogen, phosphorous, and potassium in the soil; temperature, humidity, pH, and rainfall.
 
-Create a virtual environment with only the libraries need by the application
+## Supporting Files
 
-For this [pyenv](https://github.com/pyenv/pyenv) is used to get the specific Python version
+💾 The dataset used was obtained [here](https://www.kaggle.com/datasets/atharvaingle/crop-recommendation-dataset/data).
+
+📒 The notebook used to train different predictive models can be accessed [here](https://www.kaggle.com/code/demiga/crop-recommendation/edit).
+
+## Application
+
+💻 The model is then deployed to be used in an application that can be accessed [here](https://crop-to-recommend.streamlit.app/)
+
+
+🔊 **Disclaimer:** *This is a proof-of-concept project and should not be taken as an expert opinion regarding the crop recommended to grow. Moreover, the data was obtained in India and could not be reflective of other regions' crop growth conditions.*
+
+## Project's Structure
+
+- `.github`: contains GitHub action workflow file for continuous integration.
+- `app`: the Flask application files.
+- `models`: the pre-trained models used.
+- `src`: the project's predefined package
+- `streamlit`: the streamlit application file(s).
+
+# Environment Setup
+
+Create a virtual environment with the libraries need by the application. For this follow the instructions provided by [pyenv](https://github.com/pyenv/pyenv) to get Python 3.10
+
+With that done, run the commands below to create a virtual environment with `pipenv` and use the `Pipfile` file provided to install the required libraries.
 
 ```bash
-pipenv install scikit-learn==1.2.2 flask --python=3.10.13
+pipenv --python=3.10
 pipenv shell
+pipenv install
 ```
-
-**Optional Step:** For some reasons, running `pipenv` in my local machine was slow so I used a remote AWS EC2 instance and committed the changes to another branch which will be later merged with the main branch. Here are the commands used in the remote machine:
-
-```bash
-git checkout -b remote
-git push origin remote
-```
-
-To obtain the files in my local instance, I used `git pull`.
-
 
 ## Creating a Pre-Commit
 
-Creating a config file and a hook for pre-commit
+Pre-commit is also used in this project, therefore ensure you install it and run it.
 
 ```
-pre-commit sample-config > .pre-commit-config.yaml
+pip install pre-commit
 pre-commit install
 ```
 
-Check the content of the pre-commit file to confirm the Python location and where the pre-commit needs to execute every time we make a commit 
+Check the content of the pre-commit file to confirm the Python location and where the pre-commit needs to execute every time we make a commit
 
 ```bash
 less .git/hooks/pre-commit
 ```
-
-
-
