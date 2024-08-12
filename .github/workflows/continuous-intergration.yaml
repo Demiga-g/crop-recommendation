@@ -37,4 +37,3 @@ jobs:
           cd streamlit
           pipenv run pylint --recursive=y .
           pipenv run black .
-          pipenv run isort --ls .
