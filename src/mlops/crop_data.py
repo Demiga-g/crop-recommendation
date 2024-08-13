@@ -243,3 +243,5 @@ crop_info = {
         "Harvesting Time": "3-4 years after planting for mature trees",
     },
 }
+
+crop_data = crop_info
