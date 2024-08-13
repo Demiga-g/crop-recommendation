@@ -10,8 +10,13 @@ model = load_model("SVM")
 # Set up the page configuration
 st.set_page_config(page_title='Crop Recommendation', layout='centered')
 
-
 st.title('Crop Recommendation')
+
+# Initialize session state
+if 'recommendation' not in st.session_state:
+    st.session_state.recommendation = None
+if 'show_more' not in st.session_state:
+    st.session_state.show_more = False
 
 col1, col2 = st.columns(2)
 
@@ -23,7 +28,6 @@ with st.form(key='crop_form'):
         P = st.number_input(
             'P (Phosphorus content in soil):', min_value=0, max_value=155
         )
-
         K = st.number_input(
             'K (Potassium content in soil):', min_value=0, max_value=210
         )
@@ -42,7 +46,6 @@ with st.form(key='crop_form'):
 
     submit_button = st.form_submit_button(label='Predict')
 
-
 # Handle form submission
 if submit_button:
     required_inputs = [N, P, K, temperature, humidity, ph, rainfall]
@@ -55,38 +58,30 @@ if submit_button:
             prediction = model.predict(data)
             output = prediction[0]
 
-            st.markdown(
-                f'<h2>Recommended crop is {output}</h2>', unsafe_allow_html=True
-            )
-            if output.lower() in crop_data:
-                info = crop_data[output.lower()]
-                st.markdown("### Growing Conditions:", unsafe_allow_html=True)
-                for key, value in info.items():
-                    st.markdown(f"**{key}:** {value}", unsafe_allow_html=True)
-            else:
-                st.markdown(
-                    "No specific growing information available for this crop.",
-                    unsafe_allow_html=True,
-                )
-        except ValueError:
-            st.markdown(
-                '<h2>Please ensure all inputs are valid numbers.</h2>',
-                unsafe_allow_html=True,
-            )
-    else:
-        st.markdown(
-            '<h2>Please fill in all fields.</h2>', unsafe_allow_html=True
-        )
+            st.session_state.recommendation = output
+            st.session_state.show_more = False
 
-st.sidebar.subheader("View Crop Information")
-selected_crop = st.sidebar.selectbox(
-    "Select a crop", options=list(crop_data.keys())
-)
-if st.sidebar.button("Show Info"):
-    if selected_crop.lower() in crop_data:
-        info = crop_data[selected_crop.lower()]
-        st.subheader(f"Growing Conditions for {selected_crop.capitalize()}")
+        except ValueError:
+            st.error('Please ensure all inputs are valid numbers.')
+    else:
+        st.warning('Please fill in all fields.')
+
+# Display recommendation and growing conditions
+if st.session_state.recommendation:
+    st.success(f'Recommended crop is {st.session_state.recommendation}')
+
+    # "Show More Suggestions" button
+    if st.button("Show More Suggestions"):
+        st.session_state.show_more = True
+
+# Display more suggestions if button was clicked
+if st.session_state.show_more:
+    if st.session_state.recommendation.lower() in crop_data:
+        info = crop_data[st.session_state.recommendation.lower()]
+        st.subheader(
+            f"Additional Growing Conditions for {st.session_state.recommendation.capitalize()}:"
+        )
         for key, value in info.items():
             st.markdown(f"**{key}:** {value}")
     else:
-        st.warning(f"No information available for {selected_crop}")
+        st.warning("No specific growing information available for this crop.")
