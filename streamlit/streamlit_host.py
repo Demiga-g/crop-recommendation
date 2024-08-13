@@ -1,6 +1,7 @@
 import numpy as np
 
 import streamlit as st
+from mlops.crop_data import crop_info as crop_data
 from mlops.utility_functions import load_model
 
 # Get model
@@ -57,6 +58,16 @@ if submit_button:
             st.markdown(
                 f'<h2>Recommended crop is {output}</h2>', unsafe_allow_html=True
             )
+            if output.lower() in crop_data:
+                info = crop_data[output.lower()]
+                st.markdown("### Growing Conditions:", unsafe_allow_html=True)
+                for key, value in info.items():
+                    st.markdown(f"**{key}:** {value}", unsafe_allow_html=True)
+            else:
+                st.markdown(
+                    "No specific growing information available for this crop.",
+                    unsafe_allow_html=True,
+                )
         except ValueError:
             st.markdown(
                 '<h2>Please ensure all inputs are valid numbers.</h2>',
@@ -67,4 +78,15 @@ if submit_button:
             '<h2>Please fill in all fields.</h2>', unsafe_allow_html=True
         )
 
-st.markdown('</div>', unsafe_allow_html=True)
+st.sidebar.subheader("View Crop Information")
+selected_crop = st.sidebar.selectbox(
+    "Select a crop", options=list(crop_data.keys())
+)
+if st.sidebar.button("Show Info"):
+    if selected_crop.lower() in crop_data:
+        info = crop_data[selected_crop.lower()]
+        st.subheader(f"Growing Conditions for {selected_crop.capitalize()}")
+        for key, value in info.items():
+            st.markdown(f"**{key}:** {value}")
+    else:
+        st.warning(f"No information available for {selected_crop}")
