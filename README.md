@@ -17,7 +17,7 @@ Therefore, this will be a proof of concept project that shows how a predictive m
 💻 The model is then deployed to be used in an application that can be accessed [here](https://crop-to-recommend.streamlit.app/)
 
 
-🔊 **Disclaimer:** *This is a proof-of-concept project and should not be taken as an expert opinion regarding the crop recommended to grow. Moreover, the data was obtained in India and could not be reflective of other regions' crop growth conditions.*
+🔊 **Disclaimer:** *This is a proof-of-concept project and should not be taken as an expert opinion regarding the crop recommended to grow. Moreover, this is an augmented dataset that was obtained in India based on the data available and could not be reflective of other regions' crop growth conditions.*
 
 ## Project's Structure
 
