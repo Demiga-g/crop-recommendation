@@ -1,0 +1,9 @@
+[[pages]]
+path = "home.py"
+name = "About"
+icon = "🌿"
+
+[[pages]]
+path = "app_content.py"
+name = "Toolkit"
+icon = "💻"
