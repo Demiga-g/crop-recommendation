@@ -10,7 +10,8 @@ pandas = "==2.2.2"
 uvicorn = "==0.30.5"
 asgiref = "==3.8.1"
 numpy = "==1.26.4"
-streamlit = "1.37.0"
+streamlit = "==1.37.0"
+st-pages = "==1.0.1"
 mlops = {file = ".", editable = true}
 
 [dev-packages]
