@@ -7,8 +7,6 @@ st.set_page_config(layout="wide")
 
 nav = get_nav_from_toml("pages_sections.toml")
 
-print(nav())
-
 pg = st.navigation(nav)
 
 pg.run()
