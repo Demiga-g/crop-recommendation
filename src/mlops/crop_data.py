@@ -13,7 +13,7 @@ crop_info = {
     },
     "maize": {
         "Soil": "Well-drained, fertile loamy or sand loam soil",
-        "Planting Season": "During the start of the rainy season",
+        "Planting Season": "March to May (long rains), October to December (short rains)",
         "Region": "Plains, valleys, highlands",
         "Land Preparation": "Plowing and harrowing",
         "Soil Fertility Management": "Application of NPK fertilizers",
@@ -24,8 +24,8 @@ crop_info = {
     },
     "chickpea": {
         "Soil": "Well-drained loamy or sandy soil",
-        "Planting Season": "October to February",
-        "Region": "Drylands, plains, slopes",
+        "Planting Season": "October to November (short rains)",
+        "Region": "Eastern and Rift Valley regions",
         "Land Preparation": "Plowing and leveling",
         "Soil Fertility Management": "Application of phosphorus-rich fertilizers",
         "Weed Management": "Manual weeding",
@@ -35,7 +35,7 @@ crop_info = {
     },
     "kidneybeans": {
         "Soil": "Well-drained loamy or sandy soil",
-        "Planting Season": "June to September",
+        "Planting Season": "March to May (long rains), October to December (short rains)",
         "Region": "Plains, valleys, slopes",
         "Land Preparation": "Plowing and harrowing",
         "Soil Fertility Management": "Application of organic manure",
@@ -46,8 +46,8 @@ crop_info = {
     },
     "pigeonpeas": {
         "Soil": "Well-drained loamy or clayey soil",
-        "Planting Season": "Kharif (June to September)",
-        "Region": "Plains, drylands, slopes",
+        "Planting Season": "March to May (long rains)",
+        "Region": "Eastern and coastal regions",
         "Land Preparation": "Plowing and leveling",
         "Soil Fertility Management": "Application of organic manure and phosphorus-rich fertilizers",
         "Weed Management": "Manual weeding",
@@ -57,7 +57,7 @@ crop_info = {
     },
     "mothbeans": {
         "Soil": "Well-drained sandy or loamy soil",
-        "Planting Season": "Kharif (June to September)",
+        "Planting Season": "June to September",
         "Region": "Drylands, plains, slopes",
         "Land Preparation": "Plowing and harrowing",
         "Soil Fertility Management": "Application of organic manure",
@@ -68,7 +68,7 @@ crop_info = {
     },
     "mungbean": {
         "Soil": "Well-drained loamy or sandy soil",
-        "Planting Season": "Kharif and Rabi",
+        "Planting Season": "March to May (long rains), October to December (short rains)",
         "Region": "Plains, drylands, valleys",
         "Land Preparation": "Plowing and leveling",
         "Soil Fertility Management": "Application of phosphorus-rich fertilizers",
@@ -79,8 +79,8 @@ crop_info = {
     },
     "blackgram": {
         "Soil": "Well-drained loamy or sandy soil",
-        "Planting Season": "Kharif (June to September)",
-        "Region": "Plains, drylands, valleys",
+        "Planting Season": "March to May (long rains)",
+        "Region": "Eastern and Coastal regions",
         "Land Preparation": "Plowing and leveling",
         "Soil Fertility Management": "Application of organic manure and phosphorus-rich fertilizers",
         "Weed Management": "Manual weeding",
@@ -90,8 +90,8 @@ crop_info = {
     },
     "lentil": {
         "Soil": "Well-drained loamy or clayey soil",
-        "Planting Season": "Rabi (October to February)",
-        "Region": "Plains, valleys, highlands",
+        "Planting Season": "October to November (short rains)",
+        "Region": "Highlands and semi-arid regions",
         "Land Preparation": "Plowing and leveling",
         "Soil Fertility Management": "Application of phosphorus-rich fertilizers",
         "Weed Management": "Manual weeding",
@@ -101,8 +101,8 @@ crop_info = {
     },
     "pomegranate": {
         "Soil": "Well-drained loamy or sandy soil",
-        "Planting Season": "Spring and summer",
-        "Region": "Plains, valleys, drylands",
+        "Planting Season": "March to June",
+        "Region": "Drylands and semi-arid regions",
         "Land Preparation": "Plowing and leveling",
         "Soil Fertility Management": "Application of organic manure and balanced fertilizers",
         "Weed Management": "Manual or chemical weeding",
@@ -201,7 +201,7 @@ crop_info = {
     "coconut": {
         "Soil": "Well-drained sandy or loamy soil",
         "Planting Season": "Rainy season (April-June)",
-        "Region": "Coastal regions and lowlands",
+        "Region": "Coastal regions with high humidity",
         "Land Preparation": "Clear land, dig large pits, and mix soil with organic manure",
         "Soil Fertility Management": "Apply organic manure and balanced fertilizers annually",
         "Weed Management": "Regular weeding and mulching",
