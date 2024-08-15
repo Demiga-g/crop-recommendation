@@ -120,7 +120,7 @@ if submit_button:
         except ValueError:
             st.error('Please ensure all inputs are valid numbers.')
     else:
-        st.warning('Please fill in all fields.')
+        st.warning('Crops don't grow at zeros 😊')
 
 
 # show recommended crop and other growth conditions
