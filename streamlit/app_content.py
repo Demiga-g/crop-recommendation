@@ -10,6 +10,18 @@ from mlops.utility_functions import load_model
 warnings.filterwarnings('ignore')
 
 
+def clear_session_state():
+    """
+    Checks if the 'recommendation' attribute exists in the Streamlit session state.
+    If it does, delete it to clear the recommendation from the session.
+    """
+    if 'recommendation' in st.session_state:
+        del st.session_state.recommendation
+
+
+# clear the recommendation and expander content when user change pages
+clear_session_state()
+
 st.title("Recommendation Toolkit")
 
 st.markdown('---')
@@ -110,6 +122,7 @@ if submit_button:
     else:
         st.warning('Please fill in all fields.')
 
+
 # show recommended crop and other growth conditions
 if st.session_state.recommendation:
     st.markdown(
@@ -124,7 +137,7 @@ if st.session_state.recommendation:
         unsafe_allow_html=True,
     )
 
-    with st.expander("Expand for more"):
+    with st.expander("More"):
         if st.session_state.recommendation.lower() in crop_data:
             info = crop_data[st.session_state.recommendation.lower()]
             st.markdown(
