@@ -116,8 +116,8 @@ if st.session_state.recommendation:
         f"""
         <h3>
             Recommended crop is
-            <span style="color:yellow">
-                {st.session_state.recommendation}
+            <span style="color:#FF7F50">
+                {st.session_state.recommendation.capitalize()}
             </span>
         </h3>
         """,
@@ -127,8 +127,17 @@ if st.session_state.recommendation:
     with st.expander("Expand for more"):
         if st.session_state.recommendation.lower() in crop_data:
             info = crop_data[st.session_state.recommendation.lower()]
-            st.subheader(
-                f"Optimal Harvest of {st.session_state.recommendation.capitalize()} may require:"
+            st.markdown(
+                f"""
+                <h5>
+                For optimal harvest of
+                <span style="color:#FF7F50">
+                    {st.session_state.recommendation.capitalize()}
+                </span>
+                check for:
+                </h5>
+                """,
+                unsafe_allow_html=True,
             )
             for key, value in info.items():
                 st.markdown(f"**{key}:** {value}")
