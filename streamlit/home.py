@@ -3,9 +3,10 @@ import streamlit as st
 
 st.markdown(
     """
-    <h1 style="color:#29903b">BetterFarms App</h1>
-    
-    """)
+    <h1 style="color:#4fc921">BetterFarms App</h1>
+    """,
+    unsafe_allow_html=True,
+)
 
 st.markdown(
     """
@@ -26,7 +27,7 @@ informed decisions about which crops to plant based on specific environmental co
 ### Disclaimer
 
 *This is a proof of concept application in which the recommendations provided are based
-on data and models that analyze specific environmental factors such as soil content, temperature, 
+on data and models that analyze specific environmental factors such as soil content, temperature,
 humidity, and rainfall. Therefore, the outputs are intended for informational purposes
 only and should not be considered as professional agricultural guidance.*
 """

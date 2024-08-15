@@ -19,12 +19,11 @@ pg = st.navigation(
 current_year = datetime.now().year
 st.sidebar.markdown(
     f"""
-                    <br><br><br><br><br><br>
-                    © {current_year}
-                    <br>
-                    Midega George
-                    <br>
-                    Unlimited rights 😎.""",
+    <div>
+        <br><br><br><br><br><br>
+        <b>© {current_year} Midega George</b>
+    </div>
+    """,
     unsafe_allow_html=True,
 )
 

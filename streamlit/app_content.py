@@ -22,8 +22,12 @@ def clear_session_state():
 # clear the recommendation and expander content when user change pages
 clear_session_state()
 
-st.title("Recommendation Toolkit")
-
+st.markdown(
+    """
+    <h1 style="color:#4fc921">Recommendation Toolkit</h1>
+    """,
+    unsafe_allow_html=True,
+)
 st.markdown('---')
 
 # Initialize session state
@@ -129,7 +133,7 @@ if st.session_state.recommendation:
         f"""
         <h3>
             Recommended crop is
-            <span style="color:#FF7F50">
+            <span style="color:#4fc921">
                 {st.session_state.recommendation.capitalize()}
             </span>
         </h3>
@@ -144,7 +148,7 @@ if st.session_state.recommendation:
                 f"""
                 <h5>
                 For optimal harvest of
-                <span style="color:#FF7F50">
+                <span style="color:#4fc921">
                     {st.session_state.recommendation.capitalize()}
                 </span>
                 check for:
