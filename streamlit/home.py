@@ -17,13 +17,13 @@ informed decisions about which crops to plant based on specific environmental co
 - Get a recommendation for the best crop to plant.
 - View detailed growing conditions and related pests and diseases for the recommended crop.
 
-*Use the sidebar to navigate to the "Toolkit" and start using the app.*
+*Use the sidebar to navigate to the "Toolkit" page and start using the app.*
 
 ### Disclaimer
 
 *The recommendations provided by this app are based on data and models that analyze specific
-environmental factors such as soil content, temperature, humidity, and rainfall. While we strive
-to offer accurate and reliable advice, the outputs are intended for informational purposes only
-and should not be considered as professional agricultural guidance.*
+environmental factors such as soil content, temperature, humidity, and rainfall. While the toolkit
+strives to offer accurate and reliable advice, the outputs are intended for informational purposes
+only and should not be considered as professional agricultural guidance.*
 """
 )
