@@ -21,7 +21,7 @@ informed decisions about which crops to plant based on specific environmental co
 
 ### Disclaimer
 
-*This is a proof of concept application in which the recommendations provided by this app are based
+*This is a proof of concept application in which the recommendations provided are based
 on data and models that analyze specific environmental factors such as soil content, temperature, 
 humidity, and rainfall. Therefore, the outputs are intended for informational purposes
 only and should not be considered as professional agricultural guidance.*
