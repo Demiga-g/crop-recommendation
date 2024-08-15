@@ -95,7 +95,7 @@ with st.form(key='crop_form', border=False):
         )
 
     submit_button = st.form_submit_button(
-        label='Recommend', type='primary', use_container_width=True
+        label='Recommend Crop', type='primary', use_container_width=True
     )
 
 st.markdown('---')
