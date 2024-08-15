@@ -18,14 +18,14 @@ Therefore, this will be a proof of concept project that shows how a predictive m
 
 👀 Here is a quick look at how it works:
 
-![crop recommender demo](https://github.com/user-attachments/assets/623967cd-2561-4556-8920-f860a083148d)
+![crop recommender demo](https://github.com/user-attachments/assets/bb96692f-14e5-4fb1-91bb-2ee3d2a4b72a)
 
 🔊 **Disclaimer:** *This is a proof-of-concept project and should not be taken as an expert opinion regarding the crop recommended to grow. Moreover, this is an augmented dataset that was obtained in India based on the data available and could not be reflective of other regions' crop growth conditions.*
 
 ## Project's Structure
 
 - `.github`: contains GitHub action workflow file for continuous integration.
-- `app`: the Flask application files.
+- `app`: the Flask application files (included just for trial purposes).
 - `models`: the pre-trained models used.
 - `src`: the project's predefined package
 - `streamlit`: the streamlit application file(s).
