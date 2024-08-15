@@ -15,7 +15,7 @@ informed decisions about which crops to plant based on specific environmental co
 - Enter soil nutrient levels (Nitrogen, Phosphorus, Potassium) and environmental factors
 (Temperature, Humidity, pH, Rainfall).
 - Get a recommendation for the best crop to plant.
-- View detailed growing conditions for the recommended crop.
+- View detailed growing conditions and related pests and diseases for the recommended crop.
 
 *Use the sidebar to navigate to the "Toolkit" and start using the app.*
 
