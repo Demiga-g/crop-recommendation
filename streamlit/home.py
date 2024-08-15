@@ -1,7 +1,11 @@
 # pylint: disable=no-member
 import streamlit as st
 
-st.title("The Crop Recommendation App")
+st.markdown(
+    """
+    <h1 style="color:#29903b">BetterFarms App</h1>
+    
+    """)
 
 st.markdown(
     """
