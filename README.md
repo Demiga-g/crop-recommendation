@@ -14,8 +14,11 @@ Therefore, this will be a proof of concept project that shows how a predictive m
 
 ## Application
 
-💻 The model is then deployed to be used in an application that can be accessed [here](https://crop-to-recommend.streamlit.app/)
+💻 The deployed application can be accessed [here](https://crop-to-recommend.streamlit.app/)
 
+👀 Here is a quick look at how it works:
+
+![crop recommender demo](https://github.com/user-attachments/assets/623967cd-2561-4556-8920-f860a083148d)
 
 🔊 **Disclaimer:** *This is a proof-of-concept project and should not be taken as an expert opinion regarding the crop recommended to grow. Moreover, this is an augmented dataset that was obtained in India based on the data available and could not be reflective of other regions' crop growth conditions.*
 
@@ -29,9 +32,11 @@ Therefore, this will be a proof of concept project that shows how a predictive m
 
 # Environment Setup
 
-Create a virtual environment with the libraries need by the application. For this follow the instructions provided by [pyenv](https://github.com/pyenv/pyenv) to get Python 3.10
+Create a virtual environment with the libraries need by the application. 
 
-With that done, run the commands below to create a virtual environment with `pipenv` and use the `Pipfile` file provided to install the required libraries.
+For this project Python 3.10 was used if you don't have it installed you can follow the instructions provided by [pyenv](https://github.com/pyenv/pyenv) to get it.
+
+With that done, run the commands below to create the virtual environment with `pipenv` and use the `Pipfile` file provided to install the required libraries.
 
 ```bash
 pipenv --python=3.10
