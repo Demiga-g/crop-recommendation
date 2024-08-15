@@ -18,7 +18,7 @@ Therefore, this will be a proof of concept project that shows how a predictive m
 
 👀 Here is a quick look at how it works:
 
-![crop recommender demo](https://github.com/user-attachments/assets/9013e8ff-d914-40d8-85c0-26d877468042)
+![crop recommender demo](https://github.com/user-attachments/assets/ccbc621a-0a43-46a0-85d6-958b3749cc91)
 
 🔊 **Disclaimer:** *This is a proof-of-concept project and should not be taken as an expert opinion regarding the crop recommended to grow. Moreover, this is an augmented dataset that was obtained in India based on the data available and could not be reflective of other regions' crop growth conditions.*
 
